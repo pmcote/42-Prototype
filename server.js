@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 
 // Mongoose instance and connection to our mongolab database
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://savethe:children@ds049150.mongolab.com:49150/information');
+mongoose.connect('mongodb://hfid:team42@proximus.modulusmongo.net:27017/ape5Gywe');
 
 // Models, where we pull in the models for mongoDB data
 var Test = require('./models/test');
@@ -43,7 +43,6 @@ router.route('/tests')
 			if (err) res.send(err);
 			res.json({message: 'Test created'});
 		});
-
 	})
 
 	.get(function (req, res) {
@@ -51,9 +50,50 @@ router.route('/tests')
 			if (err) res.send(err);
 			res.json(tests)
 		})
+	});
+
+router.route('/bears/:bear_id')
+
+	// get the bear with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
+	.get(function(req, res) {
+		Bear.findById(req.params.bear_id, function(err, bear) {
+			if (err)
+				res.send(err);
+			res.json(bear);
+		});
 	})
 
+	.put(function(req, res) {
 
+		// use our bear model to find the bear we want
+		Bear.findById(req.params.bear_id, function(err, bear) {
+
+			if (err)
+				res.send(err);
+
+			bear.name = req.body.name; 	// update the bears info
+
+			// save the bear
+			bear.save(function(err) {
+				if (err)
+					res.send(err);
+
+				res.json({ message: 'Bear updated!' });
+			});
+
+		});
+	})
+
+	.delete(function(req, res) {
+		Bear.remove({
+			_id: req.params.bear_id
+		}, function(err, bear) {
+			if (err)
+				res.send(err);
+
+			res.json({ message: 'Successfully deleted' });
+		});
+	});
 
 // Register Routes
 // all of our routes will be prefixed with /api
