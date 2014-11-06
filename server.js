@@ -4,8 +4,8 @@ var app        = express();
 var bodyParser = require('body-parser');
 
 // Mongoose instance and connection to our mongolab database
-var mongoose   = require('mongoose');
-mongoose.connect('mongodb://hfid:team42@proximus.modulusmongo.net:27017/ape5Gywe');
+// var mongoose   = require('mongoose');
+// mongoose.connect('mongodb://hfid:team42@proximus.modulusmongo.net:27017/ape5Gywe');
 
 // Models, where we pull in the models for mongoDB data
 var Test = require('./models/test');
@@ -22,21 +22,12 @@ var port = process.env.PORT || 3000; // set our port
 // Routing
 var router = express.Router(); // get an instance of the express Router
 
-// Middleware that happens each time we make a request
-router.use(function(req, res, next) {
-	console.log('someone made a request, was it you?');
-	next(); // move to the next associated middleware
-})
-
 // Test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-	res.json({ message: 'hooray! welcome to our api!' });
-	res.render('title');	
-})
+	res.render('index');	
+});
 
-// Register Routes
-// all of our routes will be prefixed with /api
-app.use('/api', router);
+app.use('/', router);
 
 // Server
 app.listen(port);
