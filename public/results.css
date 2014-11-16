@@ -1,0 +1,14 @@
+.halfleft{
+	width: 50%;
+}
+.halfright{
+	width: 50%;
+}
+.center{
+	margin-left: 180px;
+}
+#notebox{
+	margin:10px;
+	padding:5px;
+	border: 1px solid gray;
+}
