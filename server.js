@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set('views', __dirname + '/public');
 app.set('view engine', 'jade');
+app.use(express.static(__dirname + '/public'));
 
 var port = process.env.PORT || 3000; // set our port
 
@@ -25,6 +26,9 @@ var router = express.Router(); // get an instance of the express Router
 // Test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
 	res.render('index');	
+});
+router.get('/results', function(req, res) {
+	res.render('results');	
 });
 
 app.use('/', router);
