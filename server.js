@@ -14,6 +14,7 @@ var Test = require('./models/test');
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/public');
 app.set('view engine', 'jade');
 
@@ -25,6 +26,14 @@ var router = express.Router(); // get an instance of the express Router
 // Test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
 	res.render('index');	
+});
+
+router.get('/login', function(req, res) {
+	res.render('login');
+});
+
+router.get('/new_user', function(req, res) {
+	res.render('new_user');
 });
 
 app.use('/', router);
