@@ -14,6 +14,7 @@ var Test = require('./models/test');
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/public');
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
@@ -29,6 +30,14 @@ router.get('/', function(req, res) {
 });
 router.get('/results', function(req, res) {
 	res.render('results');	
+});
+
+router.get('/login', function(req, res) {
+	res.render('login');
+});
+
+router.get('/new_user', function(req, res) {
+	res.render('new_user');
 });
 
 app.use('/', router);
