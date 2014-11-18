@@ -1,12 +1,35 @@
 html
 	head
 		title= title
-		link(href="http://bootswatch.com/lumen/bootstrap.min.css", rel="stylesheet")
+		link(href="http://bootswatch.com/yeti/bootstrap.min.css", rel="stylesheet")
 		script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js")
 		block addToHeader
 	body
+<<<<<<< HEAD
 		nav.navbar.navbar-default(role='navigation')
 			.container-fluid
 				ul.nav.navbar-nav
 					li Experiment 
 					li Logout	
+		block content
+=======
+		.navbar.navbar-inverse
+			div.navbar-header(style="width:100%")
+				a.navbar-brand(href='#') Experiment Page
+				ul.navbar.navbar-nav
+					li
+						p Welcome Brendan Ritter
+
+			ul.nav.navbar-nav.navbar-left
+				li.active
+					a(href='#') Active
+				li
+					a(href='#') Link
+				li 
+					a(href='#') something
+		ul.nav.navbar-nav.navbar-right
+				li 
+					something
+		block content
+
+>>>>>>> be1a6f7... Adding navigation bar

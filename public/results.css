@@ -1,14 +1,42 @@
 .halfleft{
+	float: left;
 	width: 50%;
+	
 }
 .halfright{
+	float: right;
 	width: 50%;
+	border-left: 1px dotted gray;
+}
+.halfdown{
+	border-top: 1px dotted gray;
 }
 .center{
 	margin-left: 180px;
 }
+.image{
+	width:350px;
+	margin: 0 0 10px 180px;
+}
+.pushright{
+	/*margin-right: 100%;*/
+	margin-right: 200px;
+}
+.inlinepush{
+	display:inline-block;
+	margin-right:15px;
+	margin-left: 5px;
+}
+.inline{
+	display:inline-block;
+}
+#trialtag{
+	display:inline-block;
+	margin-right:15px;
+	margin-left:180px;
+}
 #notebox{
-	margin:10px;
+	/*margin:10px;*/
 	padding:5px;
-	border: 1px solid gray;
+	/*border: 1px solid gray;*/
 }

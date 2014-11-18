@@ -6,15 +6,60 @@ block addToHeader
 
 
 block content
-	div(style='height: 50px;')
 	div.halfleft
-		img.center(src="Sound-UI.png")
-		div#notebox
-			h2 Patient Information
-			p.
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Nam imperdiet, arcu non congue pharetra, ligula nisl suscipit urna, eget laoreet risus velit vel purus. 
-				Donec sed arcu elit. Cras risus nisi, molestie ac suscipit vel, dapibus at nulla. 
-				Donec mattis maximus turpis eu facilisis. Vivamus posuere in justo in dictum. Etiam vestibulum nulla et felis tincidunt, eu ultrices diam mollis. Nullam rutrum consequat est, iaculis fringilla nisi fermentum in. Curabitur et ultricies elit, quis sodales velit. Praesent vitae lacus sit amet leo faucibus dignissim. Aliquam finibus semper felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus diam mi, elementum vel felis ac, accumsan maximus orci. Nulla nisl ligula, gravida ut aliquet id, feugiat non elit. Cras sagittis pretium risus ac finibus. 
-				Cras et leo eu ex venenatis pharetra vel id lorem.
-		
+		h1 Experiment Name
+		img.center.pushright(src="Sound-UI.png")
+		p#trialtag Trial:
+		select.inline
+			option(value=0) Trial 1
+			option(value=1) Trial 2
+			option(value=2) Trial 3
+			option(value=3) Trial 4
+			option(value=4) Trial 5
+		div.halfdown
+			div#notebox
+				h2 Patient Information
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Nam imperdiet, arcu non congue pharetra, ligula nisl suscipit urna, eget laoreet risus velit vel purus. 
+					Donec sed arcu elit. Cras risus nisi, molestie ac suscipit vel, dapibus at nulla. 
+					Donec mattis maximus turpis eu facilisis. Vivamus posuere in justo in dictum. Etiam vestibulum nulla et felis tincidunt, eu ultrices diam mollis. Nullam rutrum consequat est, iaculis fringilla nisi fermentum in. Curabitur et ultricies elit, quis sodales velit. Praesent vitae lacus sit amet leo faucibus dignissim. Aliquam finibus semper felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus diam mi, elementum vel felis ac, accumsan maximus orci. Nulla nisl ligula, gravida ut aliquet id, feugiat non elit. Cras sagittis pretium risus ac finibus. 
+					Cras et leo eu ex venenatis pharetra vel id lorem.
+	div.halfright
+		h2.center Title
+		img.center.pushright.image(src="graph.png")
+		p.inline.center Trial:
+		select.inlinepush
+			option(value=0) Trial 1
+			option(value=1) Trial 2
+			option(value=2) Trial 3
+			option(value=3) Trial 4
+			option(value=4) Trial 5
+		p.inline (x)
+		select.inlinepush
+			option(value=0) Concentration
+			option(value=1) Blood-Oxygen Level 
+		p.inline (y)
+		select.inlinepush
+			option(value=0) Time
+			option(value=1) Distance 
+
+		div.halfdown
+			h2.center Title	
+			img.center.pushright.image(src="graph.png")
+			p.inline.center Trial:
+			select.inlinepush
+				option(value=0) Trial 1
+				option(value=1) Trial 2
+				option(value=2) Trial 3
+				option(value=3) Trial 4
+				option(value=4) Trial 5
+			p.inline (x)
+			select.inlinepush
+				option(value=0) Concentration
+				option(value=1) Blood-Oxygen Level 
+			p.inline (y)
+			select.inlinepush
+				option(value=0) Time
+				option(value=1) Distance 
+
