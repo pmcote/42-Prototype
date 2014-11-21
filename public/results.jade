@@ -8,7 +8,8 @@ block addToHeader
 block content
 	div.halfleft
 		h1 Experiment Name
-		img.center.pushright(src="Sound-UI.png")
+		//- img.center.pushright(src="Sound-UI.png")
+		iframe.center-text(width="600" height="315" src="//www.youtube.com/embed/bXkNut9oV_A" frameborder="0" allowfullscreen)
 		p#trialtag Trial:
 		select.inline
 			option(value=0) Trial 1
@@ -73,18 +74,51 @@ block content
 					option(value=1) Distance 
 
 		div.halfdown
-			h2.center Title	
-			img.center.pushright.image(src="graph.png")
-			p.inline.center Trial:
-			select.inlinepush
-				option(value=0) Trial 1
-				option(value=1) Trial 2
-			p.inline (x)
-			select.inlinepush
-				option(value=0) Concentration
-				option(value=1) Blood-Oxygen Level 
-			p.inline (y)
-			select.inlinepush
-				option(value=0) Time
-				option(value=1) Distance 
+			h2(style="text-align:center;") Title
+			//- img.center.pushright.image(src="graph.png")
+			div.chartandy
+				h3.verticaltext Y axis title
+				canvas(style="float:right;", id="myChart2", width="600", height="250")
+			h3.center-text X axis title
+			script(type="text/javascript").
+				var data = {
+					labels: ["January", "February", "March", "April", "May", "June", "July"],
+					datasets: [
+						{
+							label: "My First dataset",
+							fillColor: "rgba(220,220,220,0)",
+							strokeColor: "rgba(220,220,220,1)",
+							pointColor: "rgba(220,220,220,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(220,220,220,1)",
+							data: [65, 59, 80, 81, 56, 55, 40]
+						},
+						{
+							label: "My Second dataset",
+							fillColor: "rgba(151,187,205,0)",
+							strokeColor: "rgba(151,187,205,1)",
+							pointColor: "rgba(151,187,205,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(151,187,205,1)",
+							data: [28, 48, 40, 19, 86, 27, 90]
+						}
+					]
+				};
+				var ctx = document.getElementById("myChart2").getContext("2d");
+				var myNewChart = new Chart(ctx).Line(data);
+			div.setData
+				p.inline Trial:
+				select.inlinepush
+					option(value=0) Trial 1
+					option(value=1) Trial 2
+				p.inline (x)
+				select.inlinepush
+					option(value=0) Concentration
+					option(value=1) Blood-Oxygen Level 
+				p.inline (y)
+				select.inlinepush
+					option(value=0) Time
+					option(value=1) Distance 
 
