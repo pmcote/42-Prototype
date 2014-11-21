@@ -1,3 +1,10 @@
+h1{
+	margin:0;
+}
+h2{
+	margin:0;
+}
+
 .halfleft{
 	float: left;
 	width: 50%;
@@ -8,11 +15,32 @@
 	width: 50%;
 	border-left: 1px dotted gray;
 }
+.halfup{
+/*	margin: auto;
+*/	width:700px;
+}
+.setData{
+	margin: 10px auto 5px auto;
+	text-align:center;
+}
+.verticaltext{
+	-webkit-transform: rotate(270deg);
+	float: left;
+	margin: 130px 0 0 0;
+	padding:0;
+}
+.chartandy{
+	height:250px;
+}
 .halfdown{
 	border-top: 1px dotted gray;
 }
 .center{
 	margin-left: 180px;
+}
+.center-text{
+	text-align:center;
+	margin:0;
 }
 .image{
 	width:350px;
