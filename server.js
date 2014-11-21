@@ -40,6 +40,14 @@ router.get('/new_user', function(req, res) {
 	res.render('new_user');
 });
 
+router.get('/edit_experiment', function(req, res) {
+	res.render('editexperiment');
+})
+
+router.get('/home_experiment', function(req, res) {
+	res.render('homeexperiment');
+})
+
 app.use('/', router);
 
 // Server
