@@ -7,16 +7,18 @@ block addToHeader
 
 block content
 	div.halfleft
-		h1 Experiment Name
+		h2.center-text Experiment Playback
 		//- img.center.pushright(src="Sound-UI.png")
-		iframe.center-text(width="600" height="315" src="//www.youtube.com/embed/bXkNut9oV_A" frameborder="0" allowfullscreen)
-		p#trialtag Trial:
-		select.inline
-			option(value=0) Trial 1
-			option(value=1) Trial 2
+		div
+			iframe#videobox(width="600" height="315" src="//www.youtube.com/embed/bXkNut9oV_A" frameborder="0" allowfullscreen)
+		div#trialselect
+			p#trialtag Trial:
+			select.inline
+				option(value=0) Trial 1
+				option(value=1) Trial 2
 		div.halfdown
 			div#notebox
-				h2 Patient Information
+				h2.center-text Patient Information
 				p.
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 					Nam imperdiet, arcu non congue pharetra, ligula nisl suscipit urna, eget laoreet risus velit vel purus. 
@@ -24,12 +26,12 @@ block content
 					Donec mattis maximus turpis eu facilisis. Vivamus posuere in justo in dictum. Etiam vestibulum nulla et felis tincidunt, eu ultrices diam mollis. Nullam rutrum consequat est, iaculis fringilla nisi fermentum in. Curabitur et ultricies elit, quis sodales velit. Praesent vitae lacus sit amet leo faucibus dignissim. Aliquam finibus semper felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus diam mi, elementum vel felis ac, accumsan maximus orci. Nulla nisl ligula, gravida ut aliquet id, feugiat non elit. Cras sagittis pretium risus ac finibus. 
 					Cras et leo eu ex venenatis pharetra vel id lorem.
 	div.halfright
-		div.halfup
+		div.halfup.sevenwidth
 			h2(style="text-align:center;") Title
 			//- img.center.pushright.image(src="graph.png")
 			div.chartandy
 				h3.verticaltext Y axis title
-				canvas(style="float:right;", id="myChart", width="600", height="250")
+				canvas(style="float:right;", id="myChart", width="600", height="225")
 			h3.center-text X axis title
 			script(type="text/javascript").
 				var data = {
@@ -73,12 +75,12 @@ block content
 					option(value=0) Time
 					option(value=1) Distance 
 
-		div.halfdown
+		div.sevenwidth.halfdown
 			h2(style="text-align:center;") Title
 			//- img.center.pushright.image(src="graph.png")
 			div.chartandy
 				h3.verticaltext Y axis title
-				canvas(style="float:right;", id="myChart2", width="600", height="250")
+				canvas(style="float:right;", id="myChart2", width="600", height="225")
 			h3.center-text X axis title
 			script(type="text/javascript").
 				var data = {

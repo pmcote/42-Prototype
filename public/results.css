@@ -4,6 +4,9 @@ h1{
 h2{
 	margin:0;
 }
+p{
+	margin:0;
+}
 
 .halfleft{
 	float: left;
@@ -15,9 +18,11 @@ h2{
 	width: 50%;
 	border-left: 1px dotted gray;
 }
+.sevenwidth{
+	width:700px;
+}
 .halfup{
-/*	margin: auto;
-*/	width:700px;
+/*	margin: auto;*/
 }
 .setData{
 	margin: 10px auto 5px auto;
@@ -61,10 +66,17 @@ h2{
 #trialtag{
 	display:inline-block;
 	margin-right:15px;
-	margin-left:180px;
 }
 #notebox{
 	/*margin:10px;*/
 	padding:5px;
 	/*border: 1px solid gray;*/
+}
+#videobox{
+	margin: auto;
+	display:block;
+}
+#trialselect{
+	margin:10px auto 10px auto;
+	width: 120px;
 }
