@@ -1,13 +1,17 @@
 extends layout
 
 block content
-	div(style='height:40px;')
-	h1 Experiments
-	input(type='text', placeholder="Create New Experiment")
+	.col-xs-12
+		h1 Experiments
+	.col-xs-12
+		input(type='text', placeholder="Create New Experiment")
 	//- will be dropdown
-	input(type='text', placeholder="Search Experiments") 
-	input.btn.primary(type='Submit', value='Open')
-	input.btn.primary(type='Submit', value='View All Experiments')
+	.col-xs-12
+		input(type='text', placeholder="Search Experiments")
+	.col-xs-12 
+		input.btn.primary(type='Submit', value='Open')
+	.col-xs-12
+		input.btn.primary(type='Submit', value='View All Experiments')
 	
 
 
