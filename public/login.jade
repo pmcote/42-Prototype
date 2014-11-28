@@ -1,12 +1,14 @@
 extends layout
-
+head 
+	link(rel="stylesheet" href="login.css")
 block content
-	.row
-		.col-xs-12
-			h1 Log In
-		.col-xs-12
-			input(type='text', placeholder="Username")
-		.col-xs-12
-			input(type='text', placeholder="Password")
-		.col-xs-12
-			input.btn.primary(type='Submit', value='Log In')
+	.container
+		.row
+			.col-xs-12
+				h1 Log In
+			.col-xs-12
+				input(type='text', placeholder="Username")
+			.col-xs-12
+				input(type='text', placeholder="Password")
+			.col-xs-12
+				input.btn.primary(type='Submit', value='Log In')
