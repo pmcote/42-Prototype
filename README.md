@@ -1,4 +1,6 @@
 ### Team 42 Prototype
+To run the application:
+```node run server.js```
 
 This is useful for routing informtion: http://scotch.io/tutorials/javascript/learn-to-use-the-new-router-in-expressjs-4
 
