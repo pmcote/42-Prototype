@@ -46,6 +46,10 @@ router.get('/edit_experiment', function(req, res) {
 	res.render('editexperiment');
 })
 
+router.get('/find_experiment', function(req, res) {
+	res.render('find_experiment');
+})
+
 router.get('/home_experiment', function(req, res) {
 	res.render('homeexperiment');
 })
