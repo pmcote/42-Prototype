@@ -40,6 +40,9 @@ router.get('/new_user', function(req, res) {
 	res.render('new_user');
 });
 
+router.get('/run_experiment', function(req, res) {
+	res.render('run_experiment');
+});
 app.use('/', router);
 
 // Server
