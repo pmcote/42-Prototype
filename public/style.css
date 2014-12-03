@@ -1,6 +1,11 @@
 #search-dropdown{
 	/*border:5px,o/utset,transparent;*/
+	position: absolute;
 	border-style: outset;
 	border-width: 1px;
 	border-radius: 5px;
+	width:300px;
+	margin-left:360px;
+	margin-top: -30px;
+	background-color: rgba(0,0,0,0.07); /*dim the background*/
 }

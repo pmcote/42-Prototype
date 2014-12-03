@@ -15,36 +15,35 @@ html
 					a.navbar-brand(href='/') Experiment Page
 
 				.collapse.navbar-collapse
-					ul.nav.navbar-nav
-						li
-							form.navbar-form.navbar-left(role='search')
-								.form-group.search
-									input.form-control(type='text', placeholder='Search' id='search')
-									button.btn.btn-default(type='submit') 
-										span.glyphicon.glyphicon-search(aria-hidden='true')
-								div#search-dropdown.hide
-									h6 Search by Patient 
-									ul
-										li
-											a(href='index.html')
-												| Search Result #1
-											br
-											span Description
-									h6 Search by Date 
-									ul
-										li
-											a(href='index.html')
-												| Search Result #1
-											br
-											span Description
-
-								
+					ul.nav.navbar-nav								
 						li.active
 							a(href='#') Active
 						li
 							a(href='#') Link
 						li 
 							a(href='#') Link
-					p.navbar-text.navbar-right Hello, 
-							a.navbar-link(href="#") Brendan Ritter
+						li
+							form.navbar-form.navbar-left(role='search')
+								.form-group.search
+									input.form-control(type='text', placeholder='Search' id='search')
+									button.btn.btn-default(type='submit') 
+										span.glyphicon.glyphicon-search(aria-hidden='true')
+						p.navbar-text.navbar-right Hello, 
+							a.navbar-link(href="#") Brendan Ritter	
+		div#search-dropdown.hide
+			h6 Search by Patient 
+			ul
+				li
+					a(href='index.html')
+						| Search Result #1
+					br
+					span Description
+			h6 Search by Date 
+			ul
+				li
+					a(href='index.html')
+						| Search Result #1
+					br
+					span Description
+					
 		block content
