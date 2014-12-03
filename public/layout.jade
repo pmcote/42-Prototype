@@ -6,21 +6,24 @@ html
 		link(rel="stylesheet" href="style.css", type='text/css')
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
 		script(src="bootstrap/js/bootstrap.min.js")
-		script(src="app.js", language="javascript", type="text/javascript")
+		//- script(src="app.js", language="javascript", type="text/javascript")
 		block addToHeader
 	body
 		.navbar.navbar-default
 			.container-fluid
 				.navbar-header
 					a.navbar-brand(href='/')
-						span.glyphicon.glyphicon-home
+						span(title="Home").glyphicon.glyphicon-home
+					a.navbar-brand(href='#')
+						span(title="Back").glyphicon.glyphicon-chevron-left
+					block experimentName
 
 				.collapse.navbar-collapse
 					ul.nav.navbar-nav
 						li
 							form.navbar-form.navbar-left(role='search')
 								.form-group.search
-									input.form-control(type='text', placeholder='Search' id='search')
+									input.form-control(type='text', placeholder='Search Experiments' id='search')
 									button.btn.btn-default(type='submit') 
 										span.glyphicon.glyphicon-search(aria-hidden='true')
 								div#search-dropdown.hide
@@ -38,14 +41,17 @@ html
 												| Search Result #1
 											br
 											span Description
-
-								
-						li.active
-							a(href='#') Active
 						li
-							a(href='#') Link
-						li 
-							a(href='#') Link
-					p.navbar-text.navbar-right Hello, 
-							a.navbar-link(href="#") Brendan Ritter
+							a.navbar-brand
+								span(title="New Experiment").glyphicon.glyphicon-edit
+
+					ul.nav.navbar-nav.navbar-right
+						li.nav.navbar-right.dropdown-open
+							a.dropdown-toggle#dropdownMenu1(data-toggle='dropdown', roll="button" aria-expanded='true') Hello, Brendan Ritter
+								span.caret
+							ul.dropdown-menu.dropdown-menu-right(role="menu" aria-labelledby="dLabel")
+								li(roll="presentation")
+									a(roll="menuitem" tabindex="-1" href='#') Logout
+
+
 		block content
