@@ -54,6 +54,10 @@ router.get('/home_experiment', function(req, res) {
 	res.render('homeexperiment');
 })
 
+router.get('/view_all', function(req, res) {
+	res.render('view_all');
+})
+
 app.use('/', router);
 
 // Server
