@@ -1,8 +1,13 @@
 extends layout
 
 block content
-	div(style='height:40px;')
-	h1 Create New User
-	input(type='text', placeholder="Username")
-	input(type='text', placeholder="Email Address")
-	input(type='text', placeholder="Password")
+	.col-xs-12
+		h1 Create New User
+	.col-xs-12
+		input(type='text', placeholder="Username")
+	.col-xs-12
+		input(type='text', placeholder="Email Address")
+	.col-xs-12
+		input(type='text', placeholder="Password")
+	.col-xs-12
+		input.btn.primary(type='Submit', value='Create User')
