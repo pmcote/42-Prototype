@@ -3,10 +3,18 @@ extends layout
 
 block addToHeader
 	link(href="results.css", rel="stylesheet", type="text/css")
+	link(href="run_experiment.css", rel="stylesheet", type="text/css")
 	script(src="graphing/Chart.js/Chart.js")
 
 block content
-	div.col-xs-6(style="background-color: red;") TEST
+	.col-xs-6
+		#top
+			h1#patientscreenHeader Patient Screen
+			img#patientscreen(src="patient-screen.png", width="700px", height="400px")
+		#bottom
+			#play 
+				h2#startBtn Start Experiment
+			h1#time Elapsed Time: 8:40:10:89
 	.col-xs-6
 		div.halfup.sevenwidth
 			h2(style="text-align:center;") Title
