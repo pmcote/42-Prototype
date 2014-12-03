@@ -42,9 +42,13 @@ router.get('/new_user', function(req, res) {
 	res.render('new_user');
 });
 
+router.get('/run_experiment', function(req, res) {
+	res.render('run_experiment');
+});
+
 router.get('/edit_experiment', function(req, res) {
 	res.render('editexperiment');
-})
+});
 
 router.get('/find_experiment', function(req, res) {
 	res.render('find_experiment');
@@ -52,7 +56,7 @@ router.get('/find_experiment', function(req, res) {
 
 router.get('/home_experiment', function(req, res) {
 	res.render('homeexperiment');
-})
+});
 
 app.use('/', router);
 
