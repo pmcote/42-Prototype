@@ -16,11 +16,10 @@ html
 						span(title="Home").glyphicon.glyphicon-home
 					a.navbar-brand(href='#')
 						span(title="Back").glyphicon.glyphicon-chevron-left
-					block experimentName
-
 				.collapse.navbar-collapse
-
 					ul.nav.navbar-nav
+						li
+							block experimentName
 						li
 							form.navbar-form.navbar-left(role='search')
 								.form-group.search
