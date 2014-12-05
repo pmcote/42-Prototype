@@ -4,6 +4,10 @@ h1{
 h2{
 	margin:0;
 }
+h3{
+	margin:0;
+	font-size:16pt;
+}
 p{
 	margin:0;
 }
@@ -35,7 +39,7 @@ p{
 	padding:0;
 }
 .chartandy{
-	height:250px;
+	height:225px;
 }
 .halfdown{
 	border-top: 1px dotted gray;
@@ -79,4 +83,8 @@ p{
 #trialselect{
 	margin:10px auto 10px auto;
 	width: 120px;
+}
+.chart{
+	height: 225px;
+	width: 600px;
 }

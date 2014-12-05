@@ -6,7 +6,7 @@ html
 		link(rel="stylesheet" href="style.css", type='text/css')
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
 		script(src="bootstrap/js/bootstrap.min.js")
-		//- script(src="app.js", language="javascript", type="text/javascript")
+		script(src="app.js", language="javascript", type="text/javascript")
 		block addToHeader
 	body
 		.navbar.navbar-default
@@ -19,6 +19,7 @@ html
 					block experimentName
 
 				.collapse.navbar-collapse
+
 					ul.nav.navbar-nav
 						li
 							form.navbar-form.navbar-left(role='search')
@@ -52,6 +53,4 @@ html
 							ul.dropdown-menu.dropdown-menu-right(role="menu" aria-labelledby="dLabel")
 								li(roll="presentation")
 									a(roll="menuitem" tabindex="-1" href='#') Logout
-
-
 		block content

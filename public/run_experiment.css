@@ -1,0 +1,35 @@
+#patientscreen{
+	margin:auto;
+}
+#patientscreenHeader{
+	text-align: center;
+}
+#top{
+	height:60%;
+}
+
+#bottom{
+	height:	300px;
+	width:auto;
+	padding-top:20px;
+}
+
+#play{
+	height:60%;
+	width:300px;
+	background-color: gray;
+	margin: 0px auto 20px auto;
+	border-radius:20px;
+}
+
+#time{
+	height: 10%;
+	text-align:center;
+	vertical-align: bottom;
+}
+
+#startBtn{
+	text-align: center;
+	vertical-align: middle;
+	color:white;
+}
