@@ -5,6 +5,15 @@ block addToHeader
 	link(href="results.css", rel="stylesheet", type="text/css")
 	script(src="graphing/Chart.js/Chart.js")
 
+block experimentName
+	ul.nav.navbar-nav
+		li
+			a.navbar-brand.dropdown-toggle#dropdownMenu1(data-toggle='dropdown', roll="button" aria-expanded='true') Experiment Name
+				span.caret
+			ul.dropdown-menu.dropdown-menu-right(role="menu" aria-labelledby="dLabel")
+				li(roll="presentation")
+					a(roll="menuitem" tabindex="-1" href='#') Edit
+
 block content
 	div.halfleft
 		h2.center-text Experiment Playback
