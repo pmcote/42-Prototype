@@ -1,11 +1,12 @@
 extends layout
 
 block content
-center
-	a(href='run_experiment.html')
-		img(src='images/Play.png',align='center')
-	a(href='edit_experiment.html')
-		img(src='images/Edit.png', align='center')
-	button(type='button', href='results.html', align='center') View Results
-	a(href='find_experiment.html')
-		img(src='images/Delete.png', align='center')
+	center
+		a(href='/run_experiment')
+			img(src='images/Play.png',align='center' style='width:400px;height=400px')
+		a(href='/edit_experiment')
+			img(src='images/Edit.png', align='center' style='width:400px;height=400px')
+		form(method='LINK', action='/result')
+			input(type='submit', value='')
+		a(href='/find_experiment')
+			img(src='images/Delete.png', align='center' style='width:400px;height=400px')
