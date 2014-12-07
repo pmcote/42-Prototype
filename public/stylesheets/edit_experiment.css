@@ -4,6 +4,12 @@
 	background-color:black;
 	width:100%;
 }
+#patientinfoheader{
+	margin:10px;
+}
+#patientinfo{
+	background-color: #fafafa
+}
 #nulltopmargin{
 	margin-top:0;
 }
@@ -13,6 +19,7 @@
 	text-align: center;
 }
 .outerbox{
+	border-radius: 5px;
 	background-color: #eeeeee;
 	width: 30%;
 	margin: auto;
