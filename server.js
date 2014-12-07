@@ -59,7 +59,7 @@ router.get('/find_experiment', function(req, res) {
 })
 
 router.get('/home_experiment', function(req, res) {
-	res.render('homeexperiment');
+	res.render('home_experiment');
 });
 
 router.get('/view_all', function(req, res) {
