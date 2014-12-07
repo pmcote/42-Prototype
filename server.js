@@ -30,8 +30,8 @@ var router = express.Router(); // get an instance of the express Router
 router.get('/', function(req, res) {
 	res.render('index');	
 });
-router.get('/results', function(req, res) {
-	res.render('results');	
+router.get('/result', function(req, res) {
+	res.render('result');	
 });
 
 router.get('/login', function(req, res) {
@@ -51,7 +51,7 @@ router.get('/run_experiment', function(req, res) {
 });
 
 router.get('/edit_experiment', function(req, res) {
-	res.render('editexperiment');
+	res.render('edit_experiment');
 });
 
 router.get('/find_experiment', function(req, res) {
