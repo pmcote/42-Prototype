@@ -30,8 +30,8 @@ var router = express.Router(); // get an instance of the express Router
 router.get('/', function(req, res) {
 	res.render('login');	
 });
-router.get('/results', function(req, res) {
-	res.render('results');	
+router.get('/result', function(req, res) {
+	res.render('result');	
 });
 
 router.get('/login', function(req, res) {

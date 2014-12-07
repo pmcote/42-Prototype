@@ -2,20 +2,24 @@ doctype
 extends layout
 
 block addToHeader
-	link(href="results.css", rel="stylesheet", type="text/css")
-	link(href="run_experiment.css", rel="stylesheet", type="text/css")
-	script(src="graphing/Chart.js/Chart.js")
+	link(href="stylesheets/results.css", rel="stylesheet", type="text/css")
+	link(href="stylesheets/run_experiment.css", rel="stylesheet", type="text/css")
+	script(src="Chart.js/Chart.js")
+	script(src="js/run_experiment.js")
 
 block content
-	.col-xs-6
+	.left
 		#top
 			h1#patientscreenHeader Patient Screen
-			img#patientscreen(src="patient-screen.png", width="700px", height="400px")
+			img#patientscreen(src="images/patient-screen.png")
 		#bottom
-			#play 
-				h2#startBtn Start Experiment
-			h1#time Elapsed Time: 8:40:10:89
-	.col-xs-6
+			button#timer.btn.btn-primary.center Start
+			//- h1#time Elapsed Time: 8:40:10:89
+			
+			div.center
+				h1 Elapsed Time:
+				h1#txt
+	.right
 		div.halfup.sevenwidth
 			h2(style="text-align:center;") Title
 			//- img.center.pushright.image(src="graph.png")
