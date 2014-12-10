@@ -3,7 +3,8 @@ extends layout
 
 block addToHeader
 	link(href="stylesheets/results.css", rel="stylesheet", type="text/css")
-	script(src="Chart.js/Chart.js")
+	script(src="graphing/Chart.js/Chart.js")
+
 block experimentName
 	ul.nav.navbar-nav
 		li

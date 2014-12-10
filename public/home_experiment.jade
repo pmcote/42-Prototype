@@ -1,13 +1,15 @@
 extends layout
 
 block content
-	center
-		a(href='/run_experiment')
-			img(src='images/Play.png',align='center' style='width:400px;height=400px')
-		a(href='/edit_experiment')
-			img(src='images/Edit.png', align='center' style='width:400px;height=400px')
-		form(method='LINK', action='/result')
-			input(type='submit', value='')
+	.first_row(style='width:100%;height:500px')
+		#run_experiment(style='float:left')
+			h2 Run Experiment
+			a(href='/run_experiment')
+				img(src='images/Play.png',align='center' style='width:400px;height=400px')
+		#edit_experiment(style='float:left')
+			h2 Edit Experiment
+			a(href='/edit_experiment')
+				img(src='images/Edit.png', align='center' style='width:400px;height=400px')
+	#trash(style='display:clear')
 		a(href='/find_experiment')
-			img(src='images/Delete.png', align='center' style='width:400px;height=400px')
-
+			span.glyphicon.glyphicon-trash
