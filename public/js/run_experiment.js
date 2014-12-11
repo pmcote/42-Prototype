@@ -7,10 +7,11 @@ $( document ).ready(function() {
              e.target.innerHTML = "Start"
              document.getElementById('txt').innerHTML = "";  
              clearTimeout(t)  
-        }
-
-        
-    })
+        }    
+    });
+    $('#save').click(function(){
+        console.log('clicked');
+    });
 });
 
 var t;
