@@ -3,31 +3,44 @@ extends layout
 
 block addToHeader
 	link(href="stylesheets/results.css", rel="stylesheet", type="text/css")
-	link(href="stylesheets/run_experiment.css", rel="stylesheet", type="text/css")
-	script(src="Chart.js/Chart.js")
-	script(src="js/run_experiment.js")
+	script(src="graphing/Chart.js/Chart.js")
+
+block experimentName
+	ul.nav.navbar-nav
+		li
+			a.navbar-brand.dropdown-toggle#dropdownMenu1(data-toggle='dropdown', roll="button" aria-expanded='true') Experiment Name
+				span.caret
+			ul.dropdown-menu.dropdown-menu-right(role="menu" aria-labelledby="dLabel")
+				li(roll="presentation")
+					a(roll="menuitem" tabindex="-1" href='#') Edit
 
 block content
-	.left
-		#top
-			img#save(src="images/save.png")
-			h1#patientscreenHeader Patient Screen
-			img#patientscreen(src="images/patient-screen.png")
-		#bottom
-			button#timer.btn.btn-primary.center Start
-			//- h1#time Elapsed Time: 8:40:10:89
-			
-			div.center
-				h1 Elapsed Time:
-				h1#txt
-
-	.right
+	div.halfleft
+		h2.center-text Experiment Playback
+		//- img.center.pushright(src="Sound-UI.png")
+		div
+			iframe#videobox(width="600" height="315" src="//www.youtube.com/embed/bXkNut9oV_A" frameborder="0" allowfullscreen)
+		div#trialselect
+			p#trialtag Trial:
+			select.inline
+				option(value=0) Trial 1
+				option(value=1) Trial 2
+		div.halfdown
+			div#notebox
+				h2.center-text Patient Information
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Nam imperdiet, arcu non congue pharetra, ligula nisl suscipit urna, eget laoreet risus velit vel purus. 
+					Donec sed arcu elit. Cras risus nisi, molestie ac suscipit vel, dapibus at nulla. 
+					Donec mattis maximus turpis eu facilisis. Vivamus posuere in justo in dictum. Etiam vestibulum nulla et felis tincidunt, eu ultrices diam mollis. Nullam rutrum consequat est, iaculis fringilla nisi fermentum in. Curabitur et ultricies elit, quis sodales velit. Praesent vitae lacus sit amet leo faucibus dignissim. Aliquam finibus semper felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus diam mi, elementum vel felis ac, accumsan maximus orci. Nulla nisl ligula, gravida ut aliquet id, feugiat non elit. Cras sagittis pretium risus ac finibus. 
+					Cras et leo eu ex venenatis pharetra vel id lorem.
+	div.halfright
 		div.halfup.sevenwidth
 			h2(style="text-align:center;") Title
 			//- img.center.pushright.image(src="graph.png")
 			div.chartandy
 				h3.verticaltext Y axis title
-				canvas(style="float:right;", id="myChart", width="600",height="200px")
+				canvas(style="float:right;", id="myChart", width="600", height="225")
 			h3.center-text X axis title
 			script(type="text/javascript").
 				var data = {
@@ -76,7 +89,7 @@ block content
 			//- img.center.pushright.image(src="graph.png")
 			div.chartandy
 				h3.verticaltext Y axis title
-				canvas(style="float:right;", id="myChart2",width="600",height="225px")
+				canvas(style="float:right;", id="myChart2", width="600", height="225")
 			h3.center-text X axis title
 			script(type="text/javascript").
 				var data = {
@@ -119,3 +132,4 @@ block content
 				select.inlinepush
 					option(value=0) Time
 					option(value=1) Distance 
+

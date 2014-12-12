@@ -28,7 +28,7 @@ var router = express.Router(); // get an instance of the express Router
 
 // Test route to make sure everything is working (accessed at GET http://localhost:3000/)
 router.get('/', function(req, res) {
-	res.render('login');	
+	res.render('view_all');	
 });
 router.get('/result', function(req, res) {
 	res.render('result');	

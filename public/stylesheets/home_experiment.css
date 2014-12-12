@@ -1,0 +1,28 @@
+.edit_delete{
+	float:left;
+	margin:20px
+}
+.icons{
+	width:300px;
+
+}
+#delete_experiment{
+	float:right;
+	margin:20px
+}
+#delete{
+	position: absolute;
+	top: 50%;
+	left: 500px;
+	width:300px;
+	border: 1px solid gray;
+	background-color: white;
+	border-radius:5px;
+}
+.buttons{
+	padding-left:80px; 
+	padding-bottom:10px;
+}
+#trash{
+	width:100px;
+}
