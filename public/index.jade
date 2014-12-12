@@ -1,4 +1,38 @@
 extends layout
 
 block content
-	h1 Welcome Brendan Ritter
+	h3 Welcome Brendan
+	img.center(src="/images/brendan.jpg", style="width:200px; margin-left:50px;float:left")
+	h3 Your experiments
+	.container
+		.row
+			.column-xs-8
+				.panel.panel-default
+					.panel-heading All Experiments
+					table.table
+						thead
+							tr
+								th Name
+								th Date
+								th Time
+						tbody
+							tr 
+								td 
+									a(href="/results") Experiment 1
+								td December 1st
+								td 12:00pm
+							tr 
+								td 
+									a(href="/results") Experiment 2
+								td December 2st
+								td 12:00pm
+							tr 
+								td 
+									a(href="/results") Experiment 3
+								td December 3st
+								td 12:00pm
+							tr 
+								td 
+									a(href="/results") Experiment 4
+								td December 4st
+								td 12:00pm
