@@ -11,7 +11,7 @@ $( document ).ready(function() {
     });
     $('#save').click(function(){
         console.log('clicked');
-        alert('Would you like to save and the experiment close?');
+        alert('Would you like to save and close the experiment?');
         window.location.href='/result';
     });
 });
