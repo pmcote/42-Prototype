@@ -88,3 +88,7 @@ p{
 	height: 225px;
 	width: 600px;
 }
+#save{
+	width:40px;
+	position:absolute;
+}

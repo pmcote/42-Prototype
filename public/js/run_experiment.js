@@ -7,10 +7,13 @@ $( document ).ready(function() {
              e.target.innerHTML = "Start"
              document.getElementById('txt').innerHTML = "";  
              clearTimeout(t)  
-        }
-
-        
-    })
+        }    
+    });
+    $('#save').click(function(){
+        console.log('clicked');
+        alert('Would you like to save and close the experiment?');
+        window.location.href='/result';
+    });
 });
 
 var t;

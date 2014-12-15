@@ -1,13 +1,55 @@
 extends layout
 
+block addToHeader
+	link(rel="stylesheet" href="stylesheets/home_experiment.css")
+
+block experimentName
+	ul.nav.navbar-nav
+		li
+			a.navbar-brand(style="color:#333") Experiment Name
+
 block content
-	center
-		a(href='/run_experiment')
-			img(src='images/Play.png',align='center' style='width:400px;height=400px')
-		a(href='/edit_experiment')
-			img(src='images/Edit.png', align='center' style='width:400px;height=400px')
-		form(method='LINK', action='/result')
-			input(type='submit', value='')
-		a(href='/find_experiment')
-			img(src='images/Delete.png', align='center' style='width:400px;height=400px')
+	.container
+		.first(style='width:100%;height:20em;float:left;')
+			.edit_delete
+				h3 Run Experiment
+				a(href='/run_experiment')
+					img.icons(src='images/Play.png',align='center')
+			.edit_delete
+				h3 Edit Experiment
+				a(href='/edit_experiment')
+					img.icons(src='images/Edit.png',align='center')
+			#delete_experiment
+				h3 Delete Experiment
+				img.icons(src='images/Trash.png',align='center')
+		#delete.hide
+			p Are you sure you want to delete this experiment and all its associated results?
+			.buttons
+				a(href='/')
+					button.del-button.btn.btn-success Delete
+				button.cancel-button.btn.btn-default Cancel
+		.row
+			h2 Results
+			table.table
+				thead
+					tr
+						th Name
+						th Date
+				tbody
+					tr 
+						td 
+							a(href="/result") Trial 1
+						td December 1st
+					tr 
+						td 
+							a(href="/result") Trial 2
+						td December 2st
+					tr 
+						td 
+							a(href="/result") Trial 3
+						td December 3st
+					tr 
+						td 
+							a(href="/view_all") View all experiments
+						td
 

@@ -2,14 +2,22 @@ extends layout
 head 
 	link(rel="stylesheet" href="stylesheets/login.css")
 block content
-	.container
-		.row
-			.col-xs-12
-				h1 Log In
-			.col-xs-12
-				input(type='text', placeholder="Username")
-			.col-xs-12
-				input(type='text', placeholder="Password")
-			.col-xs-12
-				input.btn.primary(type='Submit', value='Log In',onclick="window.location.href='/view_all'")
-				input.btn.primary(type="Submit", value="New Researcher" onclick="window.location.href='/new_user'")
+	//- .container
+	//- 	.row
+	//- 		.col-xs-12
+	//- 			h1 Log In
+	//- 		.col-xs-12
+	//- 			input(type='text', placeholder="Username")
+	//- 		.col-xs-12
+	//- 			input(type='text', placeholder="Password")
+	//- 		.col-xs-12
+	//- 			input.btn.primary(type='Submit', value='Log In',onclick="window.location.href='/view_all'")
+	//- 			input.btn.primary(type="Submit", value="New Researcher" onclick="window.location.href='/new_user'")
+	.panel.panel-primary(style="margin-left:10px;width:200px")
+		.panel-heading(style="background:#16A8CC")
+			h3 Log In
+		.panel-body
+			input(type='text', placeholder="Username",style="margin-right:10px")
+			input(type='text', placeholder="Password")
+			button.btn.btn-success(type='Submit', value='Log In',onclick="window.location.href='/view_all'", style='margin-right:10px;margin-top:5px') Log In
+			button.btn.btn-default(type='Submit', value='New Researcher',onclick="window.location.href='/new_user'",style='margin-right:10px;margin-top:5px') New User

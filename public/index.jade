@@ -1,4 +1,36 @@
 extends layout
 
 block content
-	h1 Welcome Brendan Ritter
+	.container
+		.row
+			.column-xs-8
+				h3 Welcome Brendan
+				.panel.panel-default
+					.panel-heading All Experiments
+					table.table
+						thead
+							tr
+								th Name
+								th Date
+								th Time
+						tbody
+							tr 
+								td 
+									a(href="/result") Experiment 1
+								td December 1st
+								td 12:00pm
+							tr 
+								td 
+									a(href="/result") Experiment 2
+								td December 2st
+								td 12:00pm
+							tr 
+								td 
+									a(href="/result") Experiment 3
+								td December 3st
+								td 12:00pm
+							tr 
+								td 
+									a(href="/result") Experiment 4
+								td December 4st
+								td 12:00pm
