@@ -21,30 +21,6 @@ html
 						li
 							block experimentName
 						li
-							form.navbar-form.navbar-left(role='search')
-								.form-group.search
-									input.form-control(type='text', style="color:F2F2F2", placeholder='Search Experiments' id='search')
-									a.btn.btn-default(href="/home_experiment" type='submit') 
-										span.glyphicon.glyphicon-search( aria-hidden='true' href="home_experiment")
-								div#search-dropdown.hide
-									span#hide-box.glyphicon.glyphicon-chevron-up(style="float:right")
-									h6 Search by Patient
-									ul
-										li
-											a(href='home_experiment')
-												| Experiment #1
-											br
-											span Description
-									h6 Search by Date 
-									ul
-										li
-											a(href='home_experiment')
-												| Experiment #2
-											br
-											span Description
-									div#view_all
-										a(href="view_all") View All
-						li
 							a(href="/edit_experiment").navbar-brand
 								span(title="New Experiment",style="color:#F2F2F2 !important").glyphicon.glyphicon-edit
 
