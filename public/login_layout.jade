@@ -1,0 +1,35 @@
+doctype html
+html
+	head
+		title= title
+		link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet" href="stylesheets/style.css", type='text/css')
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+		script(src="bootstrap/js/bootstrap.min.js")
+		script(src="js/app.js", language="javascript", type="text/javascript")
+		block addToHeader
+	body
+		.navbar.navbar-default(style="background:#16A8CC")
+			.container-fluid
+				.navbar-header
+					a.navbar-brand(href='/')
+						span(title="Home", style="color:#F2F2F2 !important").glyphicon.glyphicon-home
+					a.navbar-brand(href='#')
+						span(title="Back", style="color:#F2F2F2 !important").glyphicon.glyphicon-chevron-left
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li
+							block experimentName
+						li
+							a(href="/edit_experiment").navbar-brand
+								span(title="New Experiment",style="color:#F2F2F2 !important").glyphicon.glyphicon-edit
+
+					ul.nav.navbar-nav.navbar-right
+						li.nav.navbar-right.dropdown-open
+							a.dropdown-toggle#dropdownMenu1(data-toggle='dropdown', roll="button" aria-expanded='true', style="color:#F2F2F2") Hello, Brendan Ritter
+								span.caret
+							ul.dropdown-menu.dropdown-menu-right(role="menu" aria-labelledby="dLabel")
+								li(roll="presentation")
+									a(roll="menuitem" tabindex="-1" href='login') Logout
+		
+		block content
