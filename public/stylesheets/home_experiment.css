@@ -3,8 +3,7 @@
 	margin:20px
 }
 .icons{
-	width:300px;
-
+	width:10em;
 }
 #delete_experiment{
 	float:right;
@@ -22,7 +21,4 @@
 .buttons{
 	padding-left:80px; 
 	padding-bottom:10px;
-}
-#trash{
-	width:100px;
 }
